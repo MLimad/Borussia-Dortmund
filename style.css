@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+::selection {
+    background-color: black;
+    color: #f4ff00;
+}
+
+header nav {
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    display: flex;
+}
+
+header .logo {
+    width: 15%;
+    background-color: black;
+    position: relative;
+    z-index: 1;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transform: skewX(20deg);
+    z-index: -1;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+}
+
+header .list {
+    width: 80%;
+    position: relative;
+    z-index: 1;
+}
+
+header .list::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    transform: skewX(20deg);
+    z-index: -1;
+
+}
+
+header .list {
+    display: flex;
+    text-decoration: none;
+
+}
+
+header .list li {
+    list-style: none;
+    position: relative;
+    /* margin-left: 5px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    width: 100px;
+    font-weight: 600;
+    transition: .5s;
+
+
+
+}
+
+header .list li:before {
+    content: '';
+    position: absolute;
+    background-color: #f4ff00;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: skewX(20deg);
+    border-left: 2px solid #000;
+    transition: .5s;
+
+}
+
+header .list li:hover {
+    transform: translateY(5px) translateX(1px);
+}
+
+header .sous-list {
+    position: absolute;
+    bottom: -48px;
+    left: 21px;
+    display: none;
+    transition: 0.5s;
+}
+
+header .sous-list li {
+    color: #f4ff00;
+}
+
+header .sous-list li::before {
+    background-color: black;
+    border-left: 1px solid #f4ff00;
+
+}
+
+header .list li:hover .sous-list {
+    display: flex;
+}
+
+
+header .list li:nth-child(6) {
+    color: #f4ff00;
+}
+
+header .list li:nth-child(6):before {
+    background-color: black;
+    color: #f4ff00;
+}
+
+/* Header */
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('./images/wall2.jpg');
+    background-size: cover;
+}
+
+header:before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    background: linear-gradient(to bottom, #000, transparent);
+}
+
+header .text-header h1 {
+    color: #f4ff00;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 10%;
+    font-size: 90px;
+}
+
+header .text-header h1:before {
+    content: 'True Love.';
+    bottom: -10px;
+    left: 140px;
+    width: 100%;
+    position: absolute;
+    color: white;
+    z-index: -1;
+    font-size: 30px;
+}
+
+header .text-header p {
+    position: absolute;
+    z-index: 1;
+    top: 35%;
+    transform: translateY(-50%);
+    margin-left: 10%;
+    padding: 10px;
+    color: white;
+    font-size: 40px;
+    /* background-color: black; */
+    color: #f4ff00;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+header .text-header p:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    z-index: -1;
+    transform: skewX(20deg);
+    top: 0;
+    left: 0;
+}
+
+header .players {
+    width: 500px;
+    height: 500px;
+    z-index: 1;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: up-down infinite 3s linear alternate;
+}
+
+@keyframes up-down {
+    from {
+        transform: translateY(-50%);
+    }
+
+    to {
+        transform: translateY(-52%);
+
+    }
+}
+
+header .players img {
+    width: 100%;
+    height: 100%;
+}
+
+header .socials {
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+}
+
+header .socials ul {
+    display: flex;
+    list-style: none;
+
+}
+
+header .socials ul li {
+    width: 80px;
+    color: black;
+
+
+}
+
+header .sponsors {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+header .sponsors .list img {
+    width: 40px;
+}
